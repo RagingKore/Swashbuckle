@@ -177,8 +177,8 @@ namespace Swashbuckle.Tests.SwaggerUi
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
         }
 
-        [TestCase("http://tempuri.org/swagger/ui/images/logo_small-png",                   Result = "image/png")]
-        [TestCase("http://tempuri.org/swagger/ui/css/typography-css",                      Result = "text/css")]
+        [TestCase("http://tempuri.org/swagger/ui/images/logo_small-png", ExpectedResult = "image/png")]
+        [TestCase("http://tempuri.org/swagger/ui/css/typography-css", ExpectedResult = "text/css")]
         public string It_returns_correct_asset_mime_type(string resourceUri)
         {
             var response = Get(resourceUri);
